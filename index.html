@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>대우경금속 | Daewoo Light Metal</title>
+    <meta name="description" content="차별화된 기술력과 서비스로 알루미늄 산업을 선도합니다." />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        --brand-blue: 7 29 73;
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        background-color: #F5F5F7;
+        color: #191F28;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+      }
+      
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Apple/Toss-like Smooth Spring Animation */
+      .transition-spring {
+        transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+      }
+
+      /* Scroll Reveal Classes */
+      .reveal-hidden {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      
+      .reveal-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .scale-hidden {
+        opacity: 0;
+        transform: scale(0.92);
+        transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .scale-visible {
+        opacity: 1;
+        transform: scale(1);
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Noto Sans KR"', '"Noto Sans JP"', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                dark: '#111111',
+                gray: '#F5F5F7',
+                blue: 'rgb(var(--brand-blue) / <alpha-value>)',
+                text: '#191F28',
+                subtext: '#8B95A1',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.8s ease-out forwards',
+              'slide-up': 'slideUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards',
+              'float': 'float 6s ease-in-out infinite',
+              'breathe': 'breathe 20s ease-in-out infinite alternate',
+              'scale-up': 'scaleUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'slow-reveal': 'slowReveal 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards',
+              'soft-blink': 'softBlink 3s ease-in-out infinite',
+              'draw-stroke': 'drawStroke 2s ease-out forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(30px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              breathe: {
+                '0%': { transform: 'scale(1)' },
+                '100%': { transform: 'scale(1.1)' },
+              },
+              scaleUp: {
+                '0%': { transform: 'scale(0.95)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              slowReveal: {
+                '0%': { transform: 'translateY(50px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              softBlink: {
+                '0%, 100%': { opacity: '1', transform: 'translateY(0)' },
+                '50%': { opacity: '0.1', transform: 'translateY(15px)' }, 
+              },
+              drawStroke: {
+                '0%': { strokeDasharray: '1000', strokeDashoffset: '1000' },
+                '100%': { strokeDasharray: '1000', strokeDashoffset: '0' },
+              }
+            },
+            transitionTimingFunction: {
+              'spring': 'cubic-bezier(0.25, 1, 0.5, 1)',
+            }
+          }
+        }
+      }
+    </script>
+    <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react": "https://esm.sh/react@18.2.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?deps=react@18.2.0,react-dom@18.2.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.379.0?deps=react@18.2.0"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
